@@ -24,7 +24,7 @@ To learn more about what Open AI is capable of see [OpenAI's Playground](https:/
 1. Navigate to your vault:
 
 ```
-cd `VaultFolder/.obsidian/plugins/`
+cd /path/to/yout/vault/.obsidian/plugins/
 ```
 
 2. Clone the plugin:
