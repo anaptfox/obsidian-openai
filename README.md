@@ -1,73 +1,51 @@
-# Obsidian Sample Plugin
+# Obsidian OpenAI Plugin
 
-This is a sample plugin for Obsidian (https://obsidian.md).
+[OpenAI’s API](openai.com) provides access to GPT-3, which performs a wide variety of natural language tasks:
+- Grammar Correction
+- Summerizatoin
+- Translation
+- Classification
+- etc.
 
-This project uses Typescript to provide type checking and documentation.
-The repo depends on the latest plugin API (obsidian.d.ts) in Typescript Definition format, which contains TSDoc comments describing what it does.
+These are all things that would give your second brain in [Obsidian](https://obsidian.md/) a HUGE BOOST 🚀.
 
-**Note:** The Obsidian API is still in early alpha and is subject to change at any time!
+To learn more about what Open AI is capable of see [OpenAI's Playground](https://beta.openai.com/examples).
 
-This sample plugin demonstrates some of the basic functionality the plugin API can do.
-- Changes the default font color to red using `styles.css`.
-- Adds a ribbon icon, which shows a Notice when clicked.
-- Adds a command "Open Sample Modal" which opens a Modal.
-- Adds a plugin setting tab to the settings page.
-- Registers a global click event and output 'click' to the console.
-- Registers a global interval which logs 'setInterval' to the console.
+## Demos
 
-## First time developing plugins?
+1. Helping me with date ideas:
 
-Quick starting guide for new plugin devs:
+![demo.gif](demo.gif)
 
-- Check if [someone already developed a plugin for what you want](https://obsidian.md/plugins)! There might be an existing plugin similar enough that you can partner up with.
-- Make a copy of this repo as a template with the "Use this template" button (login to GitHub if you don't see it).
-- Clone your repo to a local development folder. For convenience, you can place this folder in your `.obsidian/plugins/your-plugin-name` folder.
-- Install NodeJS, then run `npm i` in the command line under your repo folder.
-- Run `npm run dev` to compile your plugin from `main.ts` to `main.js`.
-- Make changes to `main.ts` (or create new `.ts` files). Those changes should be automatically compiled into `main.js`.
-- Reload Obsidian to load the new version of your plugin.
-- Enable plugin in settings window.
-- For updates to the Obsidian API run `npm update` in the command line under your repo folder.
+## Installing the plugin
 
-## Releasing new releases
+**Note:** The Plugin is still in early alpha and is not available as an offical plugin yet.
 
-- Update your `manifest.json` with your new version number, such as `1.0.1`, and the minimum Obsidian version required for your latest release.
-- Update your `versions.json` file with `"new-plugin-version": "minimum-obsidian-version"` so older versions of Obsidian can download an older version of your plugin that's compatible.
-- Create new GitHub release using your new version number as the "Tag version". Use the exact version number, don't include a prefix `v`. See here for an example: https://github.com/obsidianmd/obsidian-sample-plugin/releases
-- Upload the files `manifest.json`, `main.js`, `styles.css` as binary attachments. Note: The manifest.json file must be in two places, first the root path of your repository and also in the release.
-- Publish the release.
+1. Navigate to your vault:
 
-> You can simplify the version bump process by running `npm version patch`, `npm version minor` or `npm version major` after updating `minAppVersion` manually in `manifest.json`.
-> The command will bump version in `manifest.json` and `package.json`, and add the entry for the new version to `versions.json`
+```
+cd `VaultFolder/.obsidian/plugins/`
+```
 
-## Adding your plugin to the community plugin list
+2. Clone the plugin:
 
-- Check https://github.com/obsidianmd/obsidian-releases/blob/master/plugin-review.md
-- Publish an initial version.
-- Make sure you have a `README.md` file in the root of your repo.
-- Make a pull request at https://github.com/obsidianmd/obsidian-releases to add your plugin.
+```
+git clone git@github.com:anaptfox/obsidian-openai.git
+```
 
-## How to use
+3. Enable and Configure the Plugin:
 
-- Clone this repo.
-- `npm i` or `yarn` to install dependencies
-- `npm run dev` to start compilation in watch mode.
+![configuration](configuration.png)
 
-## Manually installing the plugin
+## Issues or Feature Rquests
 
-- Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/your-plugin-id/`.
+If you have any feedback or find any bugs, please open an [issue](https://github.com/anaptfox/obsidian-openai/issues).
 
-## Improve code quality with eslint (optional)
-- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code. 
-- To use eslint with this project, make sure to install eslint from terminal:
-  - `npm install -g eslint`
-- To use eslint to analyze this project use this command:
-  - `eslint main.ts`
-  - eslint will then create a report with suggestions for code improvement by file and line number.
-- If your source code is in a folder, such as `src`, you can use eslint with this command to analyze all files in that folder:
-  - `eslint .\src\`
+## Support Ya Boi
 
+If you like the plugin and would like to support ya boi, you can [buy me a coffee](https://www.buymeacoffee.com/anaptfox).
 
-## API Documentation
+## Futher Resources
 
-See https://github.com/obsidianmd/obsidian-api
+- [Obsidian API](https://github.com/obsidianmd/obsidian-api)
+- [Unofficial Obsidian Plugin Developer Docs](https://marcus.se.net/obsidian-plugin-docs/)
